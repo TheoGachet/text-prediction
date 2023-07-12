@@ -3,6 +3,8 @@
 
 REPORT EL-MAMOUN-GACHET.pdf : notre rapport, nous conseillons fortement sa lecture pour saisir le fonctionnement du programme
 
+Sujet.pdf : l'énoncé du projet fourni sur le site de l'Ecole
+
 main_avec_interface.c : code principal, interactions basée sur le terminal et sur une interface graphique interactive
 main_sans_interface.c : code principal, interactions basée uniquement sur le terminal (en cas de problème de module graphique ou simplement par choix) 
 hachage.c / hachage.h : module contenant les structures et fonctions utiles pour la table de hachage
