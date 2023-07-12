@@ -1,7 +1,7 @@
 
 --- CONTENU DU DOSSIER ---
 
-RAPPORT EL-MAMOUN-GACHET.pdf : notre rapport, nous conseillons fortement sa lecture pour saisir le fonctionnement du programme
+REPORT EL-MAMOUN-GACHET.pdf : notre rapport, nous conseillons fortement sa lecture pour saisir le fonctionnement du programme
 
 main_avec_interface.c : code principal, interactions basée sur le terminal et sur une interface graphique interactive
 main_sans_interface.c : code principal, interactions basée uniquement sur le terminal (en cas de problème de module graphique ou simplement par choix) 
