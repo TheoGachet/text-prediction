@@ -1,39 +1,61 @@
+# TESS - Text Explorer for Sentence Suggestion
 
---- CONTENU DU DOSSIER ---
+TESS is a collaborative project developed by Kawtar El Mamoun and myself. The primary goal of TESS is to create a user-friendly human-machine interface that offers intelligent word suggestions for incomplete user input. To achieve this, we have employed hash tables as the underlying data structure. TESS is designed to capture and store user-entered words, keeping track of the most frequently used ones. Additionally, the system ensures spelling accuracy and allows users to add custom names and acronyms.
 
-REPORT EL-MAMOUN-GACHET.pdf : notre rapport, nous conseillons fortement sa lecture pour saisir le fonctionnement du programme
+## Introduction
 
-Sujet.pdf : l'énoncé du projet fourni sur le site de l'Ecole
+TESS aims to enhance text entry experiences by providing contextually relevant word suggestions as users type. The system leverages the power of hash tables, allowing efficient storage and retrieval of words for prediction. Our primary focus was to develop a user-friendly interface that seamlessly integrates with the typing process, helping users compose text more quickly and accurately.
 
-main_avec_interface.c : code principal, interactions basée sur le terminal et sur une interface graphique interactive
-main_sans_interface.c : code principal, interactions basée uniquement sur le terminal (en cas de problème de module graphique ou simplement par choix) 
-hachage.c / hachage.h : module contenant les structures et fonctions utiles pour la table de hachage
-liste.c / liste.h     : module contenant les fonctions utiles pour manipuler les listes chaînées
-user.c / user.h       : module contenant les fonctions utiles pour assurer les demandes de l'utilisateur
-Makefile              : fichier permettant le découpage modulaire et assurant la structure du code lors de la compilation
-mines.png             : image utile pour l'interface
-README                : présent document
-mots_courants.txt     : dictionnaire de prédiction initial fourni sur CAMPUS
-dictionnaire.txt      : dictionnaire de la langue française
+## Key Features
 
---- INSTRUCTIONS D'EXÉCUTION ---
+1. **Intelligent Word Prediction**: TESS offers three highly relevant word suggestions based on the user's incomplete input. The system builds a prediction dictionary from user-entered words and a pre-existing French dictionary.
 
-Pour exécuter le code avec une interface sur le terminal, utilisez les commandes suivantes :
-    make all_without_interface
-    ./all_without_interface
+2. **Dynamic Word Collection**: As users input words, TESS dynamically captures and stores them in the prediction dictionary. Frequent words receive higher priority in the suggestions.
 
-Pour exécuter le code avec une interface gtk, il faut d'abord installer la librairie gtk : 
-    sudo apt-get update
-    sudo apt-get install libgtk-3-dev
-    
-Une fois la librairie installée, vous pouvez afficher l'interface interactive avec les commandes suivantes;
-    make all_w_interface
-    ./all_w_interface
+3. **Spell Check and Auto-Correction**: To ensure accurate suggestions, TESS performs real-time spell checks on user input. The system automatically corrects misspelled words when possible.
 
+4. **Custom Entries**: TESS allows users to add custom names, acronyms, or specific vocabulary to the prediction dictionary, enabling personalized suggestions.
 
---- CHOIX DE LA TAILLE DE LA TABLE DE HACHAGE ---
+5. **User-Friendly Interface**: The interface is designed to be intuitive and visually appealing. Users can seamlessly interact with the system and easily access its features.
 
-Facteur de compression : fc = k / n ( = 0.75 est la valeur optimale )
-k = nombre d'alvéoles occupées
-n = nombre total d'alvéoles ( = taille de la table )
-Les tailles des tables de hachage sont des nombres premiers pour éviter les diviseurs communs et réduire les collisions
+## Directory Content
+
+- **REPORT EL-MAMOUN-GACHET.pdf**: Our project report; we highly recommend reading it to understand the program's functionality.
+- **Sujet.pdf**: The project statement provided on the School's website.
+- **main_avec_interface.c**: Main code file with interactions based on both the terminal and an interactive graphical user interface.
+- **main_sans_interface.c**: Main code file with interactions based solely on the terminal (in case of graphical module issues or personal preference).
+- **hachage.c / hachage.h**: Module containing useful structures and functions for the hash table.
+- **liste.c / liste.h**: Module containing functions to manipulate linked lists.
+- **user.c / user.h**: Module containing functions to handle user requests.
+- **Makefile**: File enabling modular compilation and maintaining code structure during compilation.
+- **mines.png**: Image used for the graphical interface.
+- **README**: This document.
+- **mots_courants.txt**: Initial prediction dictionary provided on CAMPUS.
+- **dictionnaire.txt**: French language dictionary.
+
+## Execution Instructions
+
+To execute the code with a terminal interface, use the following commands:
+```
+make all_without_interface
+./all_without_interface
+```
+
+To execute the code with a GTK interface, you first need to install the GTK library:
+```
+sudo apt-get update
+sudo apt-get install libgtk-3-dev
+```
+
+Once the library is installed, you can display the interactive interface with the following commands:
+```
+make all_w_interface
+./all_w_interface
+```
+
+## Choosing the Hash Table Size
+
+Compression Factor: fc = k / n (where fc = 0.75 is the optimal value)
+k = number of occupied slots
+n = total number of slots (equals the size of the table)
+The sizes of the hash tables are prime numbers to reduce collisions and avoid common divisors.
