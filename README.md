@@ -1,4 +1,4 @@
-# TESS - Text Explorer for Sentence Suggestion
+# TESS - Text Entry Suggestion System
 
 TESS is a collaborative project developed by Kawtar El Mamoun and myself. The primary goal of TESS is to create a user-friendly human-machine interface that offers intelligent word suggestions for incomplete user input. To achieve this, we have employed hash tables as the underlying data structure. TESS is designed to capture and store user-entered words, keeping track of the most frequently used ones. Additionally, the system ensures spelling accuracy and allows users to add custom names and acronyms.
 
